@@ -1,5 +1,7 @@
 # 2025_TP02_Docker
 
+**_Imagen en Docker Hub:_** https://hub.docker.com/r/imadecara/compose-app
+
 ## _1. Construir las imágenes_
 
 <ins>**Opción A** — Usar la imagen publicada (recomendado)</ins>
