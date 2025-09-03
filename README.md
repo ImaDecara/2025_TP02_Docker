@@ -67,5 +67,5 @@ curl http://localhost:3002/
 **Deberían responder JSON con:** _[{"id":1,"name":"Primero"},{"id":2,"name":"Segundo"},{"id":3,"name":"Tercero"}]_
 
 **_Si /items dice que la relación no existe, ejecutar el script de inicialización_**
-**QA:** `docker compose exec -T db-qa   psql -U appuserqa   -d appdbqa   -f /docker-entrypoint-initdb.d/init.sql`
-**PROD:** `docker compose exec -T db-prod psql -U appuserprod -d appdbprod -f /docker-entrypoint-initdb.d/init.sql`
+**QA:** `docker compose exec -T db-qa   psql -U appuserqa   -d appdbqa   -f /docker-entrypoint-initdb.d/init.sql`  
+**PROD:** `docker compose exec -T db-prod psql -U appuserprod -d appdbprod -f /docker-entrypoint-initdb.d/init.sql`  
