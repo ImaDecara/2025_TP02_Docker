@@ -22,23 +22,17 @@ La primera etiqueta _(0.1.0)_ nos sirve como versión fija; _latest_ lo usamos s
 Repositorio, Publicamos en Docker Hub bajo _imadecara/compose-app_
 
 **Cómo la publicamos (breve):**
-_**1. Login en Docker Hub desde la terminal:**_ `docker login`
-_**2. Etiquetamos la imagen local con nuestro namespace y un tag claro (p. ej. 0.1.0):**_  `docker build -t imadecara/compose-app:0.1.0`
-_**3. Publicamos ese tag (y el alias de conveniencia latest):**_
+_**1. Login en Docker Hub desde la terminal:**_ `docker login`  
+_**2. Etiquetamos la imagen local con nuestro namespace y un tag claro (p. ej. 0.1.0):**_  `docker build -t imadecara/compose-app:0.1.0`  
+_**3. Publicamos ese tag (y el alias de conveniencia latest):**_  
 ```
 docker push imadecara/compose-app:0.1.0
 docker push imadecara/compose-app:latest
 ```
 
-_**4 .Para la consigna, creamos el alias de release v1.0 a partir de la misma build y lo subimos:**_
-```
-docker tag imadecara/compose-app:0.1.0 imadecara/compose-app:v1.0
-docker push imadecara/compose-app:v1.0
-```
-
 Verificamos en Docker Hub que los tags aparezcan en el repositorio.
 
-**Estrategia de versionado:** Adoptamos _**SemVer**_ (MAJOR.MINOR.PATCH) para versiones inmutables (por ejemplo 1.0.0) y mantuvimos un alias _latest_ para conveniencia (sabemos que es mutable y no conviene para despliegues críticos). Más adelante, para cumplir con la consigna, creamos el alias _v1.0_ y lo usamos como referencia estable en Compose.
+**Estrategia de versionado:** Adoptamos _**SemVer**_ (MAJOR.MINOR.PATCH) para versiones inmutables (por ejemplo 1.0.0) y mantuvimos un alias _latest_ para conveniencia. Más adelante, para cumplir con la consigna, creamos el alias _v1.0_ y lo usamos como referencia estable en Compose.
 
 ## _**4. Integrar una base de datos en contenedor**_
 **DB elegida:** _PostgreSQL_ (imagen postgres:16-alpine). Utilizamos esta, ya que traemos conocimientos previos sobre SQL y muy utilizada en la actualidad, brindadno la posibilidad de correccion de errores de manera eficiente
